@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'react-app',
     'plugin:react/recommended',
     'airbnb',
   ],
@@ -32,10 +33,15 @@ module.exports = {
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
     'react/react-in-jsx-scope': 0,
+    indent: 'off',
+    '@typescript-eslint/indent': ['error', 2],
   },
   settings: {
     'import/resolver': {
       node: {
+        paths: [
+          'src',
+        ],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
